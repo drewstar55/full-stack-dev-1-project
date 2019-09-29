@@ -88,7 +88,7 @@ class Calculator {
 const numButtons = document.querySelectorAll('[btn-num]')
 const operationButtons = document.querySelectorAll('[btn-op]')
 const equalsButton = document.querySelector('[btn-equals]')
-const deleteButton = document.querySelector('[btn-delete]')
+const delButton = document.querySelector('[btn-del]')
 const allClearButton = document.querySelector('[btn-all-clear]')
 const prevOpTxt = document.querySelector('[data-prev-op]')
 const currOpTxt = document.querySelector('[data-curr-op]')
@@ -119,7 +119,7 @@ allClearButton.addEventListener('click', button => {
   calculator.updateDisplay()
 })
 
-deleteButton.addEventListener('click', button => {
+delButton.addEventListener('click', button => {
   calculator.delete()
   calculator.updateDisplay()
 })
