@@ -39,32 +39,32 @@
               <button btn-equals class="span-two">=</button>
             </div>
             <div>
-                <img src="images/clipart-bitcoin.png" alt="Bitcoin" height="140" width="140">
-                <table class="pure-table pure-table-horizontal" id="app">
-                      <thead>
-                          <th class="center">Symbol</th>
-                          <th class="center">$ Canada</th>
-                      </thead>
-                      <tbody>
-                          <tr class="center" v-for="(value, key, index) in results">
-                              <td>{{key}}</td>
-                              <td id="cdnVal"></td>
-                          </tr>
-                      </tbody>
-                </table>
-                <br>
-                <form class="pure-form pure-form-aligned">
-                    <fieldset>
-                      <div class="pure-control-group">
-                          <input id="password" class="center" type="text" placeholder="BTC to CDN Total" readonly>
-                      </div>
-                      <div class="pure-control-group">
-                          <input id="cdnTot" class="right" readonly>
-                      </div>
-                    </fieldset>
-                </form>
-              </div>
+              <img src="images/clipart-bitcoin.png" alt="Bitcoin" height="140" width="140">
+              <table class="pure-table pure-table-horizontal" id="app">
+                  <thead>
+                      <th class="center">Symbol</th>
+                      <th class="center">$ Canada</th>
+                  </thead>
+                  <tbody>
+                      <tr class="center" v-for="(value, key, index) in results">
+                        <td>{{key}}</td>
+                        <td id="cdnVal"></td>
+                      </tr>
+                  </tbody>
+              </table>
+              <br>
+              <form class="pure-form pure-form-aligned">
+                  <fieldset>
+                    <div class="pure-control-group">
+                        <input id="password" class="center" type="text" placeholder="BTC to CDN Total" readonly>
+                    </div>
+                    <div class="pure-control-group">
+                        <input id="cdnTot" class="right" readonly>
+                    </div>
+                  </fieldset>
+              </form>
             </div>
+          </div>
       </div>
       <script src="https://unpkg.com/vue"></script>
       <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
