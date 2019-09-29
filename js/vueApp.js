@@ -10,7 +10,8 @@ const vm = new Vue({
           },
           mounted() {
               this.upDate();
-              this.timer = setInterval(this.upDate, 10000)
+              // update data every 4 seconds
+              this.timer = setInterval(this.upDate, 4000)
           },
 
       methods:{
@@ -20,14 +21,15 @@ const vm = new Vue({
                   this.results = response.data;
                   //console.log(this.results);
                   var product = 0;
-                  var cdnRate = parseFloat(this.results.BTC.CAD);
-                  var multiplier = parseFloat(document.getElementById("currOp").innerHTML);
-                  product = cdnRate * Number(multiplier.replace(/\,/g,'');
+                  var cdnRate = this.results.BTC.CAD;
+                  var multiplier = removeCommas(document.getElementById("currOp").innerHTML);
+                  product = cdnRate * multiplier;
                   //console.log("product = " + product);
-                  document.getElementById("cdnVal").innerHTML = "$" + cdnRate.toFixed(2).replace(/\d(?=(\d{3})+\.)/g, '$&,');
+                  document.getElementById("cdnVal").innerHTML = formatCurrency(cdnRate);
 
                   if (product > 0) {
-                      document.getElementById("cdnTot").value = "$" + product;
+                    console.log("product = " + product);
+                      document.getElementById("cdnTot").value = formatCurrency(product);
                   } else {
                       document.getElementById("cdnTot").value = "$0.00";
                   }
