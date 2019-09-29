@@ -1,76 +1,76 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <!-- calculator stylesheet -->
-        <link rel="stylesheet" href="css/styles.css">
-        <!-- purecss css framework -->
-        <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.1/build/pure-min.css"
-              integrity="sha384-oAOxQR6DkCoMliIh8yFnu25d7Eq/PHS21PClpwjOTeU2jRSq11vu66rf90/cZr47"
-              crossorigin="anonymous">
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <title>Bitcoin X calculated multiplier to C$ Conversion</title>
+      <!-- calculator stylesheet -->
+      <link rel="stylesheet" href="css/styles.css">
+      <!-- purecss css framework -->
+      <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.1/build/pure-min.css"
+            integrity="sha384-oAOxQR6DkCoMliIh8yFnu25d7Eq/PHS21PClpwjOTeU2jRSq11vu66rf90/cZr47"
+            crossorigin="anonymous">
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta http-equiv="X-UA-Compatible" content="ie=edge">
+      <title>Bitcoin X calculated multiplier to C$ Conversion</title>
     </head>
     <body>
-      <div class="flex-container">
-          <div class="calculator-grid">
-              <div class="output">
-                  <div data-prev-op class="prev-op"></div>
-                  <div data-curr-op class="curr-op" id="currOp">0</div>
-              </div>
-              <button btn-all-clear class="span-two">Clear</button>
-              <button btn-del><</button>
-              <button btn-op>÷</button>
-              <button btn-num>1</button>
-              <button btn-num>2</button>
-              <button btn-num>3</button>
-              <button btn-op>*</button>
-              <button btn-num>4</button>
-              <button btn-num>5</button>
-              <button btn-num>6</button>
-              <button btn-op>+</button>
-              <button btn-num>7</button>
-              <button btn-num>8</button>
-              <button btn-num>9</button>
-              <button btn-op>-</button>
-              <button btn-num>.</button>
-              <button btn-num>0</button>
-              <button btn-equals class="span-two">=</button>
+        <div class="flex-container">
+            <div class="calculator-grid">
+                    <div class="output">
+                        <div data-prev-op class="prev-op"></div>
+                        <div data-curr-op class="curr-op" id="currOp">0</div>
+                    </div>
+                    <button btn-all-clear class="span-two">Clear</button>
+                    <button btn-del><</button>
+                    <button btn-op>÷</button>
+                    <button btn-num>1</button>
+                    <button btn-num>2</button>
+                    <button btn-num>3</button>
+                    <button btn-op>*</button>
+                    <button btn-num>4</button>
+                    <button btn-num>5</button>
+                    <button btn-num>6</button>
+                    <button btn-op>+</button>
+                    <button btn-num>7</button>
+                    <button btn-num>8</button>
+                    <button btn-num>9</button>
+                    <button btn-op>-</button>
+                    <button btn-num>.</button>
+                    <button btn-num>0</button>
+                    <button btn-equals class="span-two">=</button>
             </div>
             <div>
-              <img src="img/clipart-bitcoin.png" alt="Bitcoin" height="140" width="140">
-              <table class="pure-table pure-table-horizontal" id="app">
-                  <thead>
-                      <th class="center">Symbol</th>
-                      <th class="center">$ Canada</th>
-                  </thead>
-                  <tbody>
-                      <tr class="center" v-for="(value, key, index) in results">
-                        <td>{{key}}</td>
-                        <td id="cdnVal"></td>
-                      </tr>
-                  </tbody>
-              </table>
-              <br>
-              <form class="pure-form pure-form-aligned">
-                  <fieldset>
-                    <div class="pure-control-group">
-                        <input id="password" class="center" type="text" placeholder="BTC to CDN Total" readonly>
-                    </div>
-                    <div class="pure-control-group">
-                        <input id="cdnTot" class="right" readonly>
-                    </div>
-                  </fieldset>
-              </form>
+                <img src="img/clipart-bitcoin.png" alt="Bitcoin" height="140" width="140">
+                <table class="pure-table pure-table-horizontal" id="app">
+                      <thead>
+                          <th class="center">Symbol</th>
+                          <th class="center">$ Canada</th>
+                      </thead>
+                      <tbody>
+                          <tr class="center" v-for="(value, key, index) in results">
+                            <td>{{key}}</td>
+                            <td id="cdnVal"></td>
+                          </tr>
+                      </tbody>
+                </table>
+                <br>
+                <form class="pure-form pure-form-aligned">
+                      <fieldset>
+                          <div class="pure-control-group">
+                              <input id="password" class="center" type="text" placeholder="BTC to CDN Total" readonly>
+                          </div>
+                          <div class="pure-control-group">
+                              <input id="cdnTot" class="right" readonly>
+                          </div>
+                      </fieldset>
+                </form>
             </div>
-          </div>
-      </div>
-      <script src="https://unpkg.com/vue"></script>
-      <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-      <!-- vueApp.js code receives data from the cryptocompare api -->
-      <script src="js/vueApp.js"></script>
-      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-      <script src="js/calcscript.js" defer></script>
+        </div>
+        <script src="https://unpkg.com/vue"></script>
+        <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <!-- vueApp.js code receives data from the cryptocompare api -->
+        <script src="js/vueApp.js"></script>
+        <!-- calculator -->
+        <script src="js/calcscript.js" defer></script>
     </body>
 </html>
