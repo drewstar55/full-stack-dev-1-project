@@ -1,7 +1,7 @@
 //
 // cryptocompare api returns conversion from passed cryptocurrency symbols to passed fiat currencies
 //
-const url = "https://min-api.cryptocompare.com/data/pricemulti?fsyms=BTC,ETH&tsyms=CAD";
+const url = "https://min-api.cryptocompare.com/data/pricemulti?fsyms=BTC&tsyms=CAD";
 
 const vm = new Vue({
           el: '#app',
@@ -10,8 +10,8 @@ const vm = new Vue({
           },
           mounted() {
               this.upDate();
-                console.log("product = " + product)
-              this.timer = setInterval(this.upDate, 1000)
+              console.log("product = " + product)
+              this.timer = setInterval(this.upDate, 10000)
           },
 
       methods:{
