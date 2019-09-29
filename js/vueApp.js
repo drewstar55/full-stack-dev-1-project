@@ -10,7 +10,6 @@ const vm = new Vue({
           },
           mounted() {
               this.upDate();
-              console.log("product = " + product)
               this.timer = setInterval(this.upDate, 10000)
           },
 
